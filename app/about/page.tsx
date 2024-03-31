@@ -1,4 +1,10 @@
+import { Metadata } from 'next'
 import styles from './about.module.css'
+
+export const metadata: Metadata = {
+    title: "About"
+}
+
 export default function page() {
     return (
         <div className={styles.container}>

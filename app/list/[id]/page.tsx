@@ -15,6 +15,22 @@ async function getBookList(id: string) {
     const data = await res.json();
     return data.results;
 }
+async function getBookListName(id: string) {
+    const res = await fetch(`${API_URL}/lists`);
+    const data = await res.json();
+
+    // find the list name from the list of lists
+    const list = data.results.find((list) => list.list_name_encoded === id);
+    return list.list_name;
+}
+
+export async function generateMetadata({ params: { id } }: IParams) {
+    const title = await getBookListName(id);
+    return {
+        title: title,
+    };
+}
+
 
 export default async function BookList({ params: { id } }: IParams) {
     const data = await getBookList(id);
