@@ -13,13 +13,20 @@
     max-width: 400px;
     position:relative;
 }
+.container:hover{
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.46);
+    background-color: white;
+}
 
 .image{
+    height:10rem;
+    width:8rem;
     border-radius: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .booktitle{
+    height:10%;
     text-align: center;
     font-size: 1.3rem;
     font-weight: bold;
@@ -27,6 +34,7 @@
 }
 
 .booksubtitle{
+    height:10%;
     text-align: center;
     font-size: 1.1rem;
     font-weight: bold;
@@ -34,12 +42,13 @@
 }
 
 .bookinfo{
+    height:13%;
     font-size: 1rem;
     margin: 10px;
 }
 
 .uriwrapper{
-    position: absolute;
+    height:7%;
     bottom:0;
     display: flex;
     justify-content: center;

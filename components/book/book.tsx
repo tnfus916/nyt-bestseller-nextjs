@@ -16,7 +16,7 @@ export default function BookCover({ key, title, author, image, rank, description
             <img className={styles.image} src={image} alt={title} width="50%" />
             <h2 className={styles.booktitle}>{title}</h2>
             <h3 className={styles.booksubtitle}>{author}</h3>
-            <p className={styles.bookinfo}>{description.length > 100 ? description.slice(0, 100) + "..." : description}</p>
+            <p className={styles.bookinfo}>{description}</p>
             <div className={styles.uriwrapper}>
                 <a className={styles.uri} href={buy} target="_blank" rel="noreferrer">Buy now &rarr;</a>
                 <a className={styles.uri} href={uri} target="_blank" rel="noreferrer">More info &rarr;</a>
