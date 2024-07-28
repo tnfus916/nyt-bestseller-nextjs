@@ -7,6 +7,7 @@ export default function Header() {
             <div>
                 <Link href="/">The New York Times Best Seller</Link>
             </div>
+            <Link href="/about" className={styles.aboutUs}>About us..</Link>
         </nav >
     )
 }

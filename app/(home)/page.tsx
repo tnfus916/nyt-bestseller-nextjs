@@ -1,6 +1,5 @@
 import Link from 'next/link';
-import { MotionConfig, motion } from "framer-motion";
-import { Suspense, useEffect } from 'react';
+import { Suspense } from 'react';
 
 
 import { API_URL } from '../constants';
