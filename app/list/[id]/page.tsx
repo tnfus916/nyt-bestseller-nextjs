@@ -36,7 +36,6 @@ export async function generateMetadata({ params: { id } }: IParams) {
 export default async function BookList({ params: { id } }: IParams) {
     const data = await getBookList(id);
 
-    console.log("yoyo", data.books);
     return (
         <Suspense fallback={<Loader />}>
             <div className={styles.container}>
