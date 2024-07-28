@@ -1,4 +1,5 @@
 import { Metadata } from "next"
+import styles from './not-found.module.css';
 
 export const metadata: Metadata = {
     title: 'Not Found'
@@ -6,6 +7,7 @@ export const metadata: Metadata = {
 
 export default function NotFound() {
     return (
-        <div>not found page</div>
+        <div className={styles.container}> page not found
+        </div >
     )
 }

@@ -1,67 +1,79 @@
-.container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 20px;
-    padding: 10px;
-    border: 1px solid black;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
-    width: 30%;
-    height:30rem;
-    max-width: 400px;
-    position:relative;
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  width: 30%;
+  height: 25rem;
+  max-width: 400px;
+  position: relative;
+  border-radius: 2% 98% 2% 98% / 98% 1% 99% 2%;
+  background: linear-gradient(160deg, #ffdada, #f2b1b1);
+  box-shadow: 6px 6px 12px #e3c6c6, -6px -6px 12px #e6c5c5;
 }
-.container:hover{
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.46);
-    background-color: white;
-}
-
-.image{
-    height:10rem;
-    width:8rem;
-    border-radius: 10px;
-    margin-bottom: 20px;
+.container:hover {
+  transform: scale(1.05);
+  transition: 0.5s;
 }
 
-.booktitle{
-    height:10%;
-    text-align: center;
-    font-size: 1.3rem;
-    font-weight: bold;
-    margin: 10px;
+.image {
+  height: 10rem;
+  width: 8rem;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  border-radius: 88% 10% 92% 8%/15% 85% 12% 88%;
 }
 
-.booksubtitle{
-    height:10%;
-    text-align: center;
-    font-size: 1.1rem;
-    font-weight: bold;
-    margin: 10px;
+.booktitle {
+  height: 10%;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 10px;
 }
 
-.bookinfo{
-    height:13%;
-    font-size: 1rem;
-    margin: 10px;
+.booksubtitle {
+  height: 10%;
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin: 10px;
 }
 
-.uriwrapper{
-    height:7%;
-    bottom:0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 10px;
-    width: 99%;
+.bookinfo {
+  height: 13%;
+  font-size: 1rem;
+  margin: 10px;
+  border: 1px solid red;
 }
 
-.uri{
-    background-color: white;
-    border-radius:13px;
-    padding:7px;
-    border:1px solid black;
-    margin:5px;
-    font-size:1rem;
+.uriwrapper {
+  height: 7%;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  width: 99%;
+}
+
+.uri {
+  background-color: white;
+  border-radius: 13px;
+  padding: 7px;
+  border: 1px solid black;
+  margin: 5px;
+  font-size: 1rem;
+  border-radius: 88% 10% 92% 8%/15% 85% 12% 88%;
+  background: linear-gradient(160deg, #ffdada, #f2b1b1);
+}
+
+.uri:hover {
+  /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.46); */
+  transform: scale(1.05);
+  transition: 0.5s;
 }

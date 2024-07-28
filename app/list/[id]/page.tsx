@@ -1,8 +1,10 @@
-import { resolve } from "path";
+import { Suspense } from "react";
+
 import BookCover from "../../../components/book/book";
 import { API_URL } from "../../constants";
 import styles from "./booklist.module.css";
-import { Suspense } from "react";
+import Loader from "../../../components/loader/loader";
+import Link from "next/link";
 
 interface IParams {
     params: {
@@ -19,7 +21,6 @@ async function getBookListName(id: string) {
     const res = await fetch(`${API_URL}/lists`);
     const data = await res.json();
 
-    // find the list name from the list of lists
     const list = data.results.find((list) => list.list_name_encoded === id);
     return list.list_name;
 }
@@ -34,11 +35,14 @@ export async function generateMetadata({ params: { id } }: IParams) {
 
 export default async function BookList({ params: { id } }: IParams) {
     const data = await getBookList(id);
-    console.log(data);
+
+    console.log("yoyo", data.books);
     return (
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={<Loader />}>
             <div className={styles.container}>
-                <h1 className={styles.title}>{data.list_name}</h1>
+                <div className={styles.pagetitle}>
+                    <h1 className={styles.title}>{data.list_name}</h1>
+                </div>
                 <div className={styles.listwrapper}>
                     {data.books.map((book) => (
                         <BookCover
@@ -47,7 +51,6 @@ export default async function BookList({ params: { id } }: IParams) {
                             author={book.author}
                             image={book.book_image}
                             rank={book.rank}
-                            description={book.description}
                             buy={book.amazon_product_url}
                             uri={book.book_uri}
                         />

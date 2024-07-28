@@ -1,39 +1,38 @@
-.container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 20px;
-    padding: 20px;
-    width: 100%;
-
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffdbdb;
 }
 
-.title{
-    font-size:1.8rem;
-    font-weight: bold;
-    margin-bottom: 20px;
+.title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
 
-.listwrapper{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: self-start;
-    margin: 20px;
-    padding: 20px;
-    width: 70%;
+.listwrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
 }
 
-.listbox{
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    margin: 10px;
-    border:1px solid black;
-    padding:7px;
+.listbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+  padding: 1rem;
+  position: relative;
+  border-radius: 15% 85% 12% 88% / 88% 8% 92% 12%;
+  background: linear-gradient(160deg, #ffdada, #f2b1b1);
+  box-shadow: 6px 6px 12px #e3c6c6, -6px -6px 12px #e6c5c5;
 }
 
-.listbox:hover{
-    background-color: rgb(240, 240, 240);
+.listbox:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
 }

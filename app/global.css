@@ -115,7 +115,7 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: "";
+  content: '';
   content: none;
 }
 table {
@@ -124,11 +124,15 @@ table {
 }
 
 body {
-  padding-top:150px;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  background-color: rgb(225, 228, 231);
+  width: 100%;
+  padding: 6rem 2rem;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   color: black;
   font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: #ffdbdb;
 }
 
 a {

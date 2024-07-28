@@ -1,13 +1,17 @@
 import Link from 'next/link';
+import { MotionConfig, motion } from "framer-motion";
+import { Suspense, useEffect } from 'react';
+
+
 import { API_URL } from '../constants';
 import styles from './home.module.css';
-import { MotionConfig, motion } from "framer-motion";
-import { Suspense } from 'react';
+import Loader from '../../components/loader/loader';
 
 async function getBestSellerLists() {
     const res = await fetch(`${API_URL}/lists`);
     const data = await res.json();
-    console.log(data.results);
+
+    data.results.sort((a, b) => a.list_name.localeCompare(b.list_name));
     return data.results;
 }
 
@@ -16,8 +20,7 @@ export default async function HomePage() {
 
     return (
         <div className={styles.container}>
-            <h1 className={styles.title}>The New York Times Best Seller Explorer!</h1>
-            <Suspense fallback={<div>Loading...</div>}>
+            <Suspense fallback={<Loader />}>
                 <ul className={styles.listwrapper}>
                     {data.map((list) => (
                         <div className={styles.listbox} key={list.list_name_encoded}>
